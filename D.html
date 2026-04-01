@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuel Selection Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+        }
+        .iocl { background-color: #ff9933; }
+        .bpcl { background-color: #0072bc; }
+        .hpcl { background-color: #cc0000; }
+    </style>
+</head>
+<body>
+
+    <h1>Select Fuel Company</h1>
+
+    <button class="btn iocl" onclick="openForm('iocl')">IOCL</button>
+    <button class="btn bpcl" onclick="openForm('bpcl')">BPCL</button>
+    <button class="btn hpcl" onclick="openForm('hpcl')">HPCL</button>
+
+    <script>
+        function openForm(company) {
+            let url = "";
+
+            if (company === "iocl") {
+                url = "https://docs.google.com/forms/d/e/1FAIpQLSfMBJC40d_2iX64KsFC3cJRkr0lcqw8MpoocSMRqgmRAeItEQ/viewform";
+            } else if (company === "bpcl") {
+                url = "https://docs.google.com/forms/d/e/1FAIpQLSdTCmDhRT8UH4iLxkQUSVICBtQOhQ88zAmzISiVlmVJlpUmDw/viewform";
+            } else if (company === "hpcl") {
+                alert("HPCL form not added yet!");
+                return;
+            }
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
